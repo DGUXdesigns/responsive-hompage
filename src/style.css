@@ -1,3 +1,5 @@
+@import url(./css/satoshi.css);
+
 *,
 ::after,
 ::before {
@@ -7,26 +9,35 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Satoshi-Regular', sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0 2rem;
 }
 
 h1 {
+  font-family: 'Satoshi-Bold', sans-serif;
   font-size: 4rem;
 }
 
 h2 {
+  font-family: 'Satoshi-Bold', sans-serif;
   font-size: 3rem;
+}
+
+h3 {
+  font-family: 'Satoshi-Bold', sans-serif;
+  font-size: 1.5rem;
 }
 
 .container {
   width: 100%;
   max-width: 1366px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
 }
 
 /* hero section styling */
@@ -34,7 +45,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -46,7 +57,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(172deg, rgb(8 145 178) 60%, white 40%);
+  background: linear-gradient(170deg, rgb(8 145 178) 55%, white 45%);
   z-index: -1;
 }
 
@@ -60,14 +71,16 @@ h2 {
 }
 
 .image-container {
+  aspect-ratio: 1;
+  width: 500px;
   height: 500px;
-  min-width: 500px;
   background-image: url(./assets/pexels-akwice-3094799.jpg);
   background-size: cover;
   position: relative;
   display: flex;
   justify-content: center;
   box-shadow: 0.5rem 0.5rem 0.875rem rgba(0, 0, 0, 0.25);
+  padding: 0 1rem;
 }
 
 .name {
@@ -87,7 +100,7 @@ h2 {
 }
 
 .about-me p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.7);
   padding-bottom: 1rem;
@@ -121,16 +134,22 @@ a:hover i {
 .projects-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   padding: 4rem;
-  width: 100vw;
+  width: 100%;
+}
+
+.project-header {
+  align-self: flex-start;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(400px, 1fr));
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 3rem;
   margin-top: 2rem;
+  width: 100%;
 }
 
 /* card styling */
@@ -138,10 +157,10 @@ a:hover i {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: orangered;
+  background-color: rgb(207, 100, 0);
   height: 250px;
   padding: 1.5rem;
-  filter: saturate(0);
+  filter: saturate(0.1);
   transition: filter 0.3s ease-in;
 }
 
@@ -191,4 +210,61 @@ a:hover i {
 
 .links i {
   font-size: 1.75rem;
+}
+
+/* footer styling */
+footer .container {
+  flex-direction: row;
+  gap: 2rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(8 145 178);
+  width: 100%;
+  color: white;
+  padding: 4rem 0;
+}
+
+/* footer image */
+.footer-img {
+  height: auto;
+  width: 40%;
+}
+
+.footer-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* contact stayling */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-self: flex-start;
+  gap: 1rem;
+}
+
+.contact-info p {
+  font-size: 1.5rem;
+}
+
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container .contact-info .socials {
+  align-self: flex-start;
+  margin-top: 2rem;
+  gap: 1.25rem;
+}
+
+.container .contact-info .socials a i {
+  font-size: 3rem;
 }
